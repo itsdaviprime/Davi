@@ -1,8 +1,13 @@
 /* =========================================================
-   RESPONSIVE FIX
+   DAVI PORTFOLIO
+   RESPONSIVE / MEDIA QUERY
    ========================================================= */
 
-/* GLOBAL WIDTH FIX */
+
+/* =========================================================
+   GLOBAL RESPONSIVE SAFETY
+   ========================================================= */
+
 html {
   width: 100%;
   max-width: 100%;
@@ -24,9 +29,11 @@ body {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
-/* Prevent flex/grid children from forcing page width */
+/* Prevent children from creating horizontal overflow */
+
 nav,
 section,
 header,
@@ -37,6 +44,17 @@ div {
   min-width: 0;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
 
 /* =========================================================
    1100px
@@ -44,13 +62,23 @@ div {
 
 @media (max-width: 1100px) {
 
+  /* ---------- BODY ---------- */
+
   body {
     padding-left: 30px;
     padding-right: 30px;
   }
 
+
+  /* ---------- NAV ---------- */
+
   nav {
     width: 100%;
+    max-width: 100%;
+  }
+
+  nav .logo {
+    flex-shrink: 0;
   }
 
   nav .logo h2 {
@@ -59,17 +87,26 @@ div {
 
   nav .pages {
     gap: 2px;
+    min-width: 0;
   }
 
   nav .pages a {
     font-size: 17px;
     padding: 5px 12px;
+    white-space: nowrap;
   }
 
-  /* HERO */
+
+  /* ---------- HERO ---------- */
 
   .hero {
+    width: 100%;
     min-height: 650px;
+  }
+
+  .hero .text {
+    width: 100%;
+    max-width: 100%;
   }
 
   .hero .text p {
@@ -79,49 +116,73 @@ div {
     overflow-wrap: break-word;
   }
 
-  /* SELECTED WORKS */
+  .hero .actions {
+    max-width: 100%;
+  }
+
+
+  /* ---------- SELECTED WORKS ---------- */
 
   .selected-works {
     width: 100%;
     max-width: 100%;
   }
 
-  .projects {
+  .selected-works .projects {
     width: 100%;
     max-width: 100%;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .item {
+  .selected-works .projects .item {
+    width: 100%;
     min-width: 0;
     max-width: 100%;
   }
 
-  .item img {
+  .selected-works .projects .item img {
     width: 100%;
     max-width: 100%;
     height: 300px;
   }
 
-  /* LEARNING */
+
+  /* ---------- LEARNING ---------- */
 
   .learning {
     width: 100%;
     max-width: 100%;
   }
 
-  /* JOURNEY */
+  .learning .container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+
+  /* ---------- JOURNEY ---------- */
 
   .journey {
     width: 100%;
     max-width: 100%;
   }
 
-  .journey-item {
-    min-width: 0;
+  .journey .journey-cont {
+    width: 100%;
+    max-width: 100%;
   }
 
-  /* LEADERSHIP */
+  .journey .journey-cont .journey-item {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .journey .journey-cont .journey-item p {
+    max-width: 650px;
+  }
+
+
+  /* ---------- LEADERSHIP ---------- */
 
   .leadership {
     width: 100%;
@@ -129,13 +190,14 @@ div {
     overflow: hidden;
   }
 
-  .lead-text {
+  .leadership .lead-text {
     width: 100%;
     max-width: 100%;
   }
 
-  .lead-text p {
-    max-width: 100%;
+  .leadership .lead-text p {
+    width: 100%;
+    max-width: 950px;
     overflow-wrap: break-word;
   }
 
@@ -147,14 +209,37 @@ div {
 
   .leadership-body>* {
     min-width: 0;
+    max-width: 100%;
   }
 
-  .slogan {
+  .leadership-body .lead-intro,
+  .more-ttl {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .leadership-body .lead-intro .slogan {
+    max-width: 100%;
+  }
+
+  .leadership-body .lead-intro .slogan p {
     max-width: 100%;
     overflow-wrap: break-word;
   }
 
-  /* PHILOSOPHY */
+  .more-ttl .cards {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .more-ttl .cards .card-item {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+
+  /* ---------- PHILOSOPHY ---------- */
 
   .philosophy {
     width: 100%;
@@ -163,30 +248,37 @@ div {
   }
 
   .philosophy p {
-    max-width: 100%;
+    width: 100%;
+    max-width: 900px;
     overflow-wrap: break-word;
   }
 
-  /* SKILLS */
+
+  /* ---------- SKILLS ---------- */
 
   .skills {
     width: 100%;
     max-width: 100%;
   }
 
-  .skills-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .skill-card {
+  .skills>div {
     min-width: 0;
     max-width: 100%;
   }
 
-  /* FOOTER */
+  .skills ul {
+    max-width: 100%;
+  }
+
+
+  /* ---------- FOOTER ---------- */
 
   footer {
     width: 100%;
+    max-width: 100%;
+  }
+
+  footer h3 {
     max-width: 100%;
   }
 }
@@ -198,15 +290,19 @@ div {
 
 @media (max-width: 900px) {
 
+  /* ---------- BODY ---------- */
+
   body {
     padding-left: 22px;
     padding-right: 22px;
   }
 
-  /* NAV */
+
+  /* ---------- NAV ---------- */
 
   nav {
     width: 100%;
+    max-width: 100%;
     gap: 15px;
   }
 
@@ -220,20 +316,24 @@ div {
 
   nav .pages {
     min-width: 0;
+    flex: 1;
     flex-wrap: wrap;
     justify-content: flex-end;
+    overflow: hidden;
   }
 
   nav .pages a {
     font-size: 15px;
     padding: 5px 9px;
+    white-space: nowrap;
   }
 
-  /* HERO */
+
+  /* ---------- HERO ---------- */
 
   .hero {
-    min-height: 600px;
     width: 100%;
+    min-height: 600px;
   }
 
   .hero .text {
@@ -244,86 +344,224 @@ div {
   .hero .text p {
     font-size: clamp(65px, 11vw, 100px);
     letter-spacing: -4px;
+    max-width: 100%;
   }
 
-  /* WORKS */
+  .hero .actions {
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
 
-  .projects {
+
+  /* ---------- SELECTED WORKS ---------- */
+
+  .selected-works {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .selected-works .header {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .selected-works .header h2 {
+    font-size: 32px;
+    margin-top: 90px;
+  }
+
+  .selected-works .projects {
+    width: 100%;
+    max-width: 100%;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 15px;
   }
 
-  .project-card,
-  .item {
+  .selected-works .projects .item {
     width: 100%;
     min-width: 0;
+    max-width: 100%;
   }
 
-  .item img {
+  .selected-works .projects .item img {
+    width: 100%;
     height: 280px;
   }
 
-  /* JOURNEY */
 
-  .journey-item {
+  /* ---------- LEARNING ---------- */
+
+  .learning {
+    width: 100%;
+    max-width: 100%;
+  }
+
+
+  /* ---------- JOURNEY ---------- */
+
+  .journey {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .journey .journey-cont {
+    width: 100%;
+  }
+
+  .journey .journey-cont .journey-item {
     gap: 25px;
   }
 
-  .journey-item p {
+  .journey .journey-cont .journey-item p {
     max-width: 100%;
   }
 
-  /* LEADERSHIP */
 
-  .lead-text {
-    min-height: 500px;
-    height: auto;
-    padding: 70px 0;
+  /* ---------- LEADERSHIP ---------- */
+
+  .leadership {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
   }
 
-  .lead-text p {
+  .leadership .lead-text {
+    width: 100%;
+    max-width: 100%;
+
+    /*
+      IMPORTANT:
+      Do not use the desktop 95vh height here.
+      The heading needs to determine its own height.
+    */
+
+    height: auto;
+    min-height: 0;
+    padding: 80px 0;
+
+    display: block;
+  }
+
+  .leadership .lead-text p {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+
     font-size: clamp(38px, 6vw, 60px);
     letter-spacing: -2px;
+    line-height: 1.05;
+
+    overflow-wrap: break-word;
   }
 
   .leadership-body {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    width: 100%;
+    max-width: 100%;
+
+    grid-template-columns:
+      minmax(0, 1fr) minmax(0, 1fr);
+
+    gap: 40px;
   }
 
-  .leadership-body>div {
+  .leadership-body>* {
     min-width: 0;
+    max-width: 100%;
   }
 
-  .slogan {
+  .leadership-body .lead-intro,
+  .more-ttl {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .leadership-body .lead-intro .slogan {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .leadership-body .lead-intro .slogan p {
+    width: 100%;
+    max-width: 100%;
+
     font-size: clamp(55px, 8vw, 85px);
     letter-spacing: -4px;
+
+    overflow-wrap: break-word;
   }
 
-  /* PHILOSOPHY */
+  .more-ttl .cards {
+    width: 100%;
+  }
+
+  .more-ttl .cards .card-item {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+
+  /* ---------- PHILOSOPHY ---------- */
+
+  .philosophy {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
 
   .philosophy p {
+    width: 100%;
+    max-width: 100%;
+
     font-size: clamp(28px, 5vw, 45px);
     letter-spacing: -1.5px;
+    line-height: 1.1;
+
+    overflow-wrap: break-word;
   }
 
-  /* SKILLS */
 
-  .skills-grid {
+  /* ---------- SKILLS ---------- */
+
+  .skills {
+    width: 100%;
+    max-width: 100%;
+
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .skill-card {
+  .skills>div {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
     padding: 28px;
   }
 
-  /* FOOTER */
+  .skills h2 {
+    font-size: 30px;
+  }
+
+  .skills ul {
+    max-width: 100%;
+  }
+
+
+  /* ---------- FOOTER ---------- */
 
   footer {
     position: relative;
-    width: 100%;
-    max-width: 100%;
+
     left: auto;
     right: auto;
+
+    width: 100%;
+    max-width: 100%;
+
+    max-height: none;
+  }
+
+  footer h3 {
+    max-width: 100%;
   }
 }
 
@@ -334,256 +572,555 @@ div {
 
 @media (max-width: 700px) {
 
+  /* ---------- BODY ---------- */
+
   body {
     padding-left: 16px;
     padding-right: 16px;
   }
 
-  /* NAV */
+
+  /* ---------- NAV ---------- */
 
   nav {
     width: 100%;
+    max-width: 100%;
+
     min-height: 70px;
+
     padding: 10px 12px;
+
     gap: 10px;
+
+    overflow: hidden;
+  }
+
+  nav .logo {
+    flex-shrink: 0;
   }
 
   nav .logo h2 {
     font-size: 27px;
+    white-space: nowrap;
   }
 
   nav .pages {
-    gap: 0;
+    min-width: 0;
+
     flex: 1;
+
+    display: flex;
+    align-items: center;
     justify-content: flex-end;
+
+    gap: 0;
+
+    flex-wrap: nowrap;
+
+    overflow: hidden;
   }
 
   nav .pages a {
     font-size: 13px;
     padding: 5px 7px;
+
+    white-space: nowrap;
+
+    min-width: 0;
   }
 
-  /* HERO */
+
+  /* ---------- HERO ---------- */
 
   .hero {
-    min-height: 550px;
     width: 100%;
+    max-width: 100%;
+
+    min-height: 550px;
+
     padding-left: 0;
     padding-right: 0;
   }
 
   .hero .text {
     width: 100%;
+    max-width: 100%;
+    min-width: 0;
   }
 
   .hero .text p {
+    width: 100%;
+    max-width: 100%;
+
     font-size: clamp(52px, 13vw, 80px);
+
     letter-spacing: -3px;
     line-height: 0.95;
+
+    overflow-wrap: break-word;
     word-break: normal;
-    overflow-wrap: anywhere;
   }
 
   .hero .actions {
     width: 100%;
+    max-width: 100%;
+
     flex-wrap: wrap;
   }
 
-  /* SELECTED WORKS */
+  .hero .actions a {
+    white-space: nowrap;
+  }
+
+
+  /* =======================================================
+     SELECTED WORKS
+     ONE CARD PER ROW
+     ======================================================= */
 
   .selected-works {
     width: 100%;
+    max-width: 100%;
+
     padding-left: 0;
     padding-right: 0;
   }
 
-  .projects {
+  .selected-works .header {
     width: 100%;
-    grid-template-columns: minmax(0, 1fr);
-    gap: 16px;
+    max-width: 100%;
   }
 
-  .item {
+  .selected-works .header h2 {
+    font-size: 30px;
+
+    margin-top: 70px;
+
+    max-width: 100%;
+
+    overflow-wrap: break-word;
+  }
+
+  /*
+    IMPORTANT:
+    Use the full selector because the desktop rule is:
+
+    .selected-works .projects {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    This guarantees ONE CARD PER ROW.
+  */
+
+  .selected-works .projects {
+    display: grid;
+
     width: 100%;
+    max-width: 100%;
+
+    grid-template-columns: minmax(0, 1fr) !important;
+
+    gap: 20px;
+  }
+
+  .selected-works .projects .item {
+    width: 100%;
+    max-width: 100%;
     min-width: 0;
+
     overflow: hidden;
   }
 
-  .item img {
+  .selected-works .projects .item img {
+    display: block;
+
     width: 100%;
+    max-width: 100%;
+
     height: 300px;
+
     object-fit: contain;
     object-position: center;
+
     background-color: #f5f5f2;
   }
 
-  .item h3,
-  .item p {
+  .selected-works .projects .item h2,
+  .selected-works .projects .item p {
+    width: 100%;
     max-width: 100%;
-    overflow-wrap: anywhere;
+
+    overflow-wrap: break-word;
   }
 
-  /* LEARNING */
+
+  /* ---------- LEARNING ---------- */
 
   .learning {
     width: 100%;
+    max-width: 100%;
+
     padding-top: 70px;
     padding-bottom: 70px;
+
     overflow: hidden;
   }
 
-  /* JOURNEY */
+  .learning .container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .learning .container h1 {
+    font-size: 30px;
+  }
+
+
+  /* ---------- JOURNEY ---------- */
 
   .journey {
     width: 100%;
+    max-width: 100%;
+
     overflow: hidden;
   }
 
-  .journey-item {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    width: 100%;
+  .journey h2 {
+    font-size: 30px;
   }
 
-  .journey-item>* {
+  .journey .journey-cont {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .journey .journey-cont .journey-item {
+    width: 100%;
+    max-width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    padding: 30px 0;
+  }
+
+  .journey .journey-cont .journey-item>* {
     width: 100%;
     max-width: 100%;
     min-width: 0;
   }
 
-  .journey-item p {
-    font-size: 15px;
-    overflow-wrap: anywhere;
+  .journey .journey-cont .journey-item h2 {
+    font-size: 23px;
   }
 
-  /* LEADERSHIP */
+  .journey .journey-cont .journey-item p {
+    width: 100%;
+    max-width: 100%;
+
+    font-size: 15px;
+
+    overflow-wrap: break-word;
+  }
+
+
+  /* =======================================================
+     LEADERSHIP
+     ======================================================= */
 
   .leadership {
     width: 100%;
+    max-width: 100%;
+
     overflow: hidden;
   }
 
-  .lead-text {
-    width: 100%;
-    min-height: 500px;
-    height: auto;
-    padding: 60px 0;
-  }
+  /*
+    CRITICAL FIX:
+    The desktop version has height: 95vh.
 
-  .lead-text p {
+    On mobile we remove that fixed height completely.
+    This prevents the first part of the Leadership text
+    from being pushed/clipped.
+  */
+
+  .leadership .lead-text {
     width: 100%;
     max-width: 100%;
-    font-size: clamp(35px, 9vw, 60px);
-    letter-spacing: -2px;
-    overflow-wrap: anywhere;
+
+    height: auto !important;
+    min-height: 0 !important;
+
+    display: block;
+
+    padding: 80px 0;
+
+    overflow: visible;
   }
+
+  .leadership .lead-text p {
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0;
+
+    font-size: clamp(38px, 10vw, 60px);
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+
+    overflow: visible;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+
+  /* ---------- LEADERSHIP BODY ---------- */
 
   .leadership-body {
     width: 100%;
+    max-width: 100%;
+
+    display: grid;
+
     grid-template-columns: minmax(0, 1fr);
+
     gap: 45px;
+
+    margin-top: var(--space-13);
   }
 
   .leadership-body>* {
     width: 100%;
-    min-width: 0;
     max-width: 100%;
+    min-width: 0;
   }
 
-  .slogan {
+
+  /* ---------- TTL INTRO ---------- */
+
+  .leadership-body .lead-intro {
     width: 100%;
     max-width: 100%;
-    font-size: clamp(60px, 17vw, 95px);
+    min-width: 0;
+  }
+
+  .leadership-body .lead-intro .founding,
+  .more-ttl p {
+    width: 100%;
+    max-width: 100%;
+
+    font-size: 16px;
+
+    overflow-wrap: break-word;
+  }
+
+
+  /* ---------- LEARN → CREATE → PROFIT ---------- */
+
+  .leadership-body .lead-intro .slogan {
+    width: 100%;
+    max-width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-top: var(--space-7);
+
+    overflow: visible;
+  }
+
+  .leadership-body .lead-intro .slogan p {
+    width: 100%;
+    max-width: 100%;
+
+    font-size: clamp(58px, 17vw, 95px);
+
+    line-height: 0.95;
+
     letter-spacing: -4px;
-    overflow-wrap: anywhere;
+
+    overflow-wrap: break-word;
+    word-break: normal;
   }
 
-  .ttl-cards {
-    width: 100%;
-  }
 
-  .ttl-card {
+  /* ---------- TTL CARDS ---------- */
+
+  .more-ttl {
     width: 100%;
+    max-width: 100%;
     min-width: 0;
   }
 
-  /* PHILOSOPHY */
+  .more-ttl .cards {
+    width: 100%;
+    max-width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-top: 30px;
+  }
+
+  .more-ttl .cards .card-item {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    padding: 22px;
+
+    overflow: hidden;
+  }
+
+  .more-ttl .cards .card-item h3,
+  .more-ttl .cards .card-item p {
+    max-width: 100%;
+
+    overflow-wrap: break-word;
+  }
+
+
+  /* =======================================================
+     PHILOSOPHY
+     ======================================================= */
 
   .philosophy {
     width: 100%;
     max-width: 100%;
-    overflow: hidden;
+
     padding-left: 0;
     padding-right: 0;
+
+    overflow: hidden;
   }
 
   .philosophy p {
     width: 100%;
     max-width: 100%;
+
     font-size: clamp(28px, 8vw, 48px);
-    letter-spacing: -1.5px;
+
     line-height: 1.05;
-    overflow-wrap: anywhere;
+
+    letter-spacing: -1.5px;
+
+    overflow-wrap: break-word;
     word-break: normal;
   }
 
-  /* SKILLS */
+
+  /* =======================================================
+     SKILLS
+     ======================================================= */
+
+  /*
+    Your actual HTML/CSS uses:
+
+    .skills
+    .skills > div
+    .skills h2
+    .skills ul
+    .skills li
+
+    NOT .skills-grid / .skill-card.
+  */
 
   .skills {
     width: 100%;
-    overflow: hidden;
-  }
-
-  .skills-grid {
-    width: 100%;
-    grid-template-columns: minmax(0, 1fr);
-    gap: 12px;
-  }
-
-  .skill-card {
-    width: 100%;
-    min-width: 0;
     max-width: 100%;
+
+    grid-template-columns: minmax(0, 1fr);
+
+    gap: 12px;
+
+    overflow: hidden;
+
+    padding: 70px 0;
+  }
+
+  .skills>div {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
     min-height: 260px;
+
     padding: 24px;
   }
 
-  .skill-card h2 {
+  .skills h2 {
     font-size: 28px;
-  }
 
-  .skill-card ul {
     max-width: 100%;
   }
 
-  .skill-card li {
+  .skills ul {
+    width: 100%;
     max-width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
   }
 
-  /* FOOTER */
+  .skills li {
+    max-width: 100%;
+
+    overflow-wrap: break-word;
+  }
+
+
+  /* =======================================================
+     FOOTER
+     ======================================================= */
 
   footer {
     position: relative;
+
     left: auto;
     right: auto;
+
     width: 100%;
     max-width: 100%;
+
     max-height: none;
+
     padding: 55px 25px;
+
     overflow: hidden;
   }
 
   footer h3 {
+    width: 100%;
     max-width: 100%;
+
     font-size: clamp(50px, 13vw, 80px);
+
     letter-spacing: -3px;
-    overflow-wrap: anywhere;
+
+    overflow-wrap: break-word;
   }
 
   footer .btn {
+    width: 100%;
+    max-width: 100%;
+
     margin-left: 0;
+
+    display: flex;
     flex-wrap: wrap;
+
+    gap: 12px;
+  }
+
+  footer .btn a {
     max-width: 100%;
   }
 }
@@ -595,15 +1132,24 @@ div {
 
 @media (max-width: 500px) {
 
+  /* ---------- BODY ---------- */
+
   body {
     padding-left: 12px;
     padding-right: 12px;
   }
 
-  /* NAV */
+
+  /* ---------- NAV ---------- */
 
   nav {
+    width: 100%;
+    max-width: 100%;
+
     padding: 9px 8px;
+
+    gap: 6px;
+
     border-radius: 0 0 15px 15px;
   }
 
@@ -620,12 +1166,17 @@ div {
     padding: 4px 5px;
   }
 
-  /* If the nav is still too crowded */
+  /*
+    Remove the final navigation item when space
+    becomes too tight.
+  */
+
   nav .pages a:last-child {
     display: none;
   }
 
-  /* HERO */
+
+  /* ---------- HERO ---------- */
 
   .hero {
     min-height: 500px;
@@ -633,6 +1184,7 @@ div {
 
   .hero .text p {
     font-size: clamp(45px, 14vw, 70px);
+
     letter-spacing: -2px;
   }
 
@@ -640,91 +1192,176 @@ div {
     gap: 8px;
   }
 
-  .hero .actions a,
-  .hero .actions button {
+  .hero .actions a {
     font-size: 13px;
     padding: 11px 16px;
   }
 
-  /* WORKS */
 
-  .item {
+  /* =======================================================
+     SELECTED WORKS
+     ======================================================= */
+
+  .selected-works .header h2 {
+    font-size: 28px;
+    margin-top: 60px;
+  }
+
+  .selected-works .projects {
+    grid-template-columns: minmax(0, 1fr) !important;
+
+    gap: 16px;
+  }
+
+  .selected-works .projects .item {
+    width: 100%;
+    max-width: 100%;
+
     padding: 14px;
+
     border-radius: 16px;
   }
 
-  .item img {
+  .selected-works .projects .item img {
+    width: 100%;
+
     height: 240px;
+
     border-radius: 11px;
   }
 
-  .item h3 {
+  .selected-works .projects .item h2 {
     font-size: 23px;
   }
 
-  .item p {
+  .selected-works .projects .item p {
     font-size: 13px;
   }
 
-  /* JOURNEY */
 
-  .journey-item {
+  /* ---------- LEARNING ---------- */
+
+  .learning {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .learning .container h1 {
+    font-size: 28px;
+  }
+
+
+  /* ---------- JOURNEY ---------- */
+
+  .journey h2 {
+    font-size: 28px;
+  }
+
+  .journey .journey-cont .journey-item {
     padding: 25px 0;
   }
 
-  .journey-item h3 {
+  .journey .journey-cont .journey-item h2 {
     font-size: 22px;
   }
 
-  .journey-item p {
+  .journey .journey-cont .journey-item p {
     font-size: 14px;
   }
 
-  /* LEADERSHIP */
 
-  .lead-text {
-    min-height: 430px;
-    padding: 50px 0;
+  /* =======================================================
+     LEADERSHIP
+     ======================================================= */
+
+  .leadership .lead-text {
+    height: auto !important;
+    min-height: 0 !important;
+
+    padding: 60px 0;
   }
 
-  .lead-text p {
-    font-size: clamp(32px, 10vw, 52px);
+  .leadership .lead-text p {
+    width: 100%;
+    max-width: 100%;
+
+    font-size: clamp(34px, 10vw, 50px);
+
+    line-height: 1.05;
+
+    letter-spacing: -1.5px;
   }
 
-  .slogan {
+  .leadership-body {
+    grid-template-columns: minmax(0, 1fr);
+
+    gap: 40px;
+  }
+
+  .leadership-body .lead-intro .slogan p {
     font-size: clamp(55px, 18vw, 80px);
+
     letter-spacing: -3px;
   }
 
-  .ttl-card {
+  .more-ttl .cards .card-item {
     padding: 20px;
   }
 
-  /* PHILOSOPHY */
+
+  /* =======================================================
+     PHILOSOPHY
+     ======================================================= */
+
+  .philosophy {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
   .philosophy p {
+    width: 100%;
+    max-width: 100%;
+
     font-size: clamp(27px, 9vw, 42px);
+
+    line-height: 1.05;
+
     letter-spacing: -1px;
   }
 
-  /* SKILLS */
 
-  .skill-card {
+  /* =======================================================
+     SKILLS
+     ======================================================= */
+
+  .skills {
+    grid-template-columns: minmax(0, 1fr);
+
+    gap: 12px;
+
+    padding: 60px 0;
+  }
+
+  .skills>div {
     min-height: 240px;
+
     padding: 22px;
   }
 
-  .skill-card h2 {
+  .skills h2 {
     font-size: 25px;
+
     margin-bottom: 35px;
   }
 
-  .skill-card li {
+  .skills li {
     font-size: 12px;
+
     padding: 9px 12px;
   }
 
-  /* FOOTER */
+
+  /* ---------- FOOTER ---------- */
 
   footer {
     padding: 45px 20px;
@@ -732,11 +1369,17 @@ div {
 
   footer h3 {
     font-size: clamp(45px, 14vw, 70px);
+
     letter-spacing: -2px;
+  }
+
+  footer .btn {
+    margin-left: 0;
   }
 
   footer .btn a {
     font-size: 15px;
+
     padding: 14px 19px;
   }
 }
@@ -748,9 +1391,19 @@ div {
 
 @media (max-width: 380px) {
 
+  /* ---------- BODY ---------- */
+
   body {
     padding-left: 9px;
     padding-right: 9px;
+  }
+
+
+  /* ---------- NAV ---------- */
+
+  nav {
+    padding-left: 7px;
+    padding-right: 7px;
   }
 
   nav .logo h2 {
@@ -762,30 +1415,109 @@ div {
     padding: 4px;
   }
 
+
+  /* ---------- HERO ---------- */
+
+  .hero {
+    min-height: 470px;
+  }
+
   .hero .text p {
     font-size: 43px;
+
     letter-spacing: -2px;
   }
 
-  .item img {
-    height: 210px;
-  }
 
-  .lead-text p {
-    font-size: 30px;
-  }
+  /* ---------- SELECTED WORKS ---------- */
 
-  .slogan {
-    font-size: 52px;
-  }
-
-  .philosophy p {
+  .selected-works .header h2 {
     font-size: 26px;
   }
 
-  .skill-card {
+  .selected-works .projects {
+    grid-template-columns: minmax(0, 1fr) !important;
+
+    gap: 14px;
+  }
+
+  .selected-works .projects .item {
+    padding: 12px;
+  }
+
+  .selected-works .projects .item img {
+    height: 210px;
+  }
+
+  .selected-works .projects .item h2 {
+    font-size: 21px;
+  }
+
+
+  /* ---------- JOURNEY ---------- */
+
+  .journey .journey-cont .journey-item {
+    padding: 22px 0;
+  }
+
+
+  /* =======================================================
+     LEADERSHIP
+     ======================================================= */
+
+  .leadership .lead-text {
+    padding: 50px 0;
+  }
+
+  .leadership .lead-text p {
+    font-size: 30px;
+
+    letter-spacing: -1px;
+
+    line-height: 1.05;
+  }
+
+  .leadership-body {
+    gap: 35px;
+  }
+
+  .leadership-body .lead-intro .slogan p {
+    font-size: 52px;
+
+    letter-spacing: -2px;
+  }
+
+
+  /* ---------- PHILOSOPHY ---------- */
+
+  .philosophy p {
+    font-size: 26px;
+
+    letter-spacing: -0.8px;
+  }
+
+
+  /* ---------- SKILLS ---------- */
+
+  .skills {
+    gap: 10px;
+  }
+
+  .skills>div {
     padding: 18px;
   }
+
+  .skills h2 {
+    font-size: 23px;
+  }
+
+  .skills li {
+    font-size: 11px;
+    padding: 8px 10px;
+  }
+
+
+  /* ---------- FOOTER ---------- */
 
   footer {
     padding: 40px 16px;
@@ -794,118 +1526,4 @@ div {
   footer h3 {
     font-size: 43px;
   }
-}
-
-
-
-
-
-@media (max-width: 500px) {
-
-  .leadership .lead-text {
-    padding: 60px 0;
-  }
-
-  .leadership .lead-text p {
-    font-size: clamp(34px, 10vw, 50px);
-    line-height: 1.05;
-    letter-spacing: -1.5px;
-  }
-
-}
-
-
-
-@media (max-width: 700px) {
-
-  .leadership .lead-text {
-    height: auto !important;
-    min-height: 0 !important;
-
-    display: block;
-
-    padding: 80px 0;
-
-    border-bottom: 1px solid var(--border);
-
-    overflow: visible;
-  }
-
-  .leadership .lead-text p {
-    width: 100%;
-    max-width: 100%;
-
-    margin: 0;
-
-    font-size: clamp(38px, 10vw, 60px);
-    line-height: 1.05;
-    letter-spacing: -2px;
-
-    overflow: visible;
-    word-break: normal;
-    overflow-wrap: break-word;
-  }
-
-}
-
-
-@media (max-width: 500px) {
-
-  .leadership .lead-text {
-    padding: 60px 0;
-  }
-
-  .leadership .lead-text p {
-    font-size: clamp(34px, 10vw, 50px);
-    line-height: 1.05;
-    letter-spacing: -1.5px;
-  }
-
-}
-
-
-/* =========================================================
-   SELECTED WORKS — MOBILE
-   ========================================================= */
-
-@media (max-width: 700px) {
-
-  .selected-works .projects {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) !important;
-    width: 100%;
-    gap: 20px;
-  }
-
-  .selected-works .projects .item {
-    width: 100%;
-    min-width: 0;
-    max-width: 100%;
-  }
-
-  .selected-works .projects .item img {
-    width: 100%;
-    height: 300px;
-    object-fit: contain;
-    object-position: center;
-    background-color: #f5f5f2;
-  }
-
-}
-
-@media (max-width: 500px) {
-
-  .selected-works .projects {
-    grid-template-columns: minmax(0, 1fr) !important;
-    gap: 16px;
-  }
-
-  .selected-works .projects .item {
-    width: 100%;
-  }
-
-  .selected-works .projects .item img {
-    height: 240px;
-  }
-
 }
