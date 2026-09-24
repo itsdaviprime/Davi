@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Limelight&family=Londrina+Shadow&family=Mea+Culpa&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+/* =========================
+   ROOT VARIABLES
+========================= */
+
+:root {
+  /* Colors */
+  --muted: #707070;
+  --bg: #F5F5F2;
+  --card: #FFFFFF;
+  --pad-default: 100px;
+  --text: #111111;
+  --text-secondry: #707070;
+  --text-muted: #6B7280;
+  --grey-white: rgba(196, 196, 196, 0.877); 
+  --accent: #635BFF;
+  --accent-secondary: #ECEBFF;
+
+  --border: #DEDED9;
+  --success: #22C55E;
+  --footer: #111111;
+  --footer-text: #AAAAAA;
+  --primary-font: font-family: "DM Sans", sans-serif;
+  --header-font: "Space Grotesk", sans-serif;
+  --weight-normal: 400;
+  --nav-weight: 450;
+  --button-weight: 500;
+  --important-text: 600;
+  --logo: 700;
+  --huge-headings: 600;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 40px;
+  --space-9: 48px;
+  --space-10: 64px;
+  --space-11: 80px;
+  --space-12: 96px;
+  --space-13: 128px;
+  --space-2-5: 18px;
+  --section-space: 128px;
+
+    /* MORE SPACING */
+    --space-xs: 8px;
+      /* normal gaps */
+      --space-sm: 16px;
+      /* card/internal spacing */
+      --space-md: 24px;
+      /* larger gaps */
+      --space-lg: 32px;
+      /* section elements */
+      --space-xl: 48px;
+      /* major spacing */
+      --space-xxl: 64px;
+      /* section spacing */
+      --space-xxxl: 96px;
+      /* hero/major sections */
+      --space-huge: 128px;
+
+    /* Radius */
+    --radius: 20px;
+    --radius-pill: 100px;
+    --radius-card-img: 14px;
+}
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   BASE
+========================= */
+
+/* html {
+  scroll-behavior: smooth;
+}  */
+
+
+body {
+  width: 1280px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+main,
+header,
+footer {
+  margin-inline: auto;
+}

@@ -1,0 +1,797 @@
+/* =========================================================
+   RESPONSIVE FIX
+   ========================================================= */
+
+/* GLOBAL WIDTH FIX */
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  max-width: 1280px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Prevent flex/grid children from forcing page width */
+nav,
+section,
+header,
+footer,
+main,
+article,
+div {
+  min-width: 0;
+}
+
+
+/* =========================================================
+   1100px
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  body {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  nav .logo h2 {
+    font-size: 34px;
+  }
+
+  nav .pages {
+    gap: 2px;
+  }
+
+  nav .pages a {
+    font-size: 17px;
+    padding: 5px 12px;
+  }
+
+  /* HERO */
+
+  .hero {
+    min-height: 650px;
+  }
+
+  .hero .text p {
+    font-size: clamp(80px, 12vw, 125px);
+    letter-spacing: -5px;
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+  /* SELECTED WORKS */
+
+  .selected-works {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .projects {
+    width: 100%;
+    max-width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .item {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .item img {
+    width: 100%;
+    max-width: 100%;
+    height: 300px;
+  }
+
+  /* LEARNING */
+
+  .learning {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* JOURNEY */
+
+  .journey {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .journey-item {
+    min-width: 0;
+  }
+
+  /* LEADERSHIP */
+
+  .leadership {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .lead-text {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .lead-text p {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+  .leadership-body {
+    width: 100%;
+    max-width: 100%;
+    gap: 40px;
+  }
+
+  .leadership-body>* {
+    min-width: 0;
+  }
+
+  .slogan {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+  /* PHILOSOPHY */
+
+  .philosophy {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .philosophy p {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+  /* SKILLS */
+
+  .skills {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .skill-card {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  /* FOOTER */
+
+  footer {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+
+/* =========================================================
+   900px
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  body {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  /* NAV */
+
+  nav {
+    width: 100%;
+    gap: 15px;
+  }
+
+  nav .logo {
+    flex-shrink: 0;
+  }
+
+  nav .logo h2 {
+    font-size: 30px;
+  }
+
+  nav .pages {
+    min-width: 0;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  nav .pages a {
+    font-size: 15px;
+    padding: 5px 9px;
+  }
+
+  /* HERO */
+
+  .hero {
+    min-height: 600px;
+    width: 100%;
+  }
+
+  .hero .text {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero .text p {
+    font-size: clamp(65px, 11vw, 100px);
+    letter-spacing: -4px;
+  }
+
+  /* WORKS */
+
+  .projects {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+  }
+
+  .project-card,
+  .item {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .item img {
+    height: 280px;
+  }
+
+  /* JOURNEY */
+
+  .journey-item {
+    gap: 25px;
+  }
+
+  .journey-item p {
+    max-width: 100%;
+  }
+
+  /* LEADERSHIP */
+
+  .lead-text {
+    min-height: 500px;
+    height: auto;
+    padding: 70px 0;
+  }
+
+  .lead-text p {
+    font-size: clamp(38px, 6vw, 60px);
+    letter-spacing: -2px;
+  }
+
+  .leadership-body {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .leadership-body>div {
+    min-width: 0;
+  }
+
+  .slogan {
+    font-size: clamp(55px, 8vw, 85px);
+    letter-spacing: -4px;
+  }
+
+  /* PHILOSOPHY */
+
+  .philosophy p {
+    font-size: clamp(28px, 5vw, 45px);
+    letter-spacing: -1.5px;
+  }
+
+  /* SKILLS */
+
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .skill-card {
+    padding: 28px;
+  }
+
+  /* FOOTER */
+
+  footer {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    left: auto;
+    right: auto;
+  }
+}
+
+
+/* =========================================================
+   700px
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  body {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* NAV */
+
+  nav {
+    width: 100%;
+    min-height: 70px;
+    padding: 10px 12px;
+    gap: 10px;
+  }
+
+  nav .logo h2 {
+    font-size: 27px;
+  }
+
+  nav .pages {
+    gap: 0;
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  nav .pages a {
+    font-size: 13px;
+    padding: 5px 7px;
+  }
+
+  /* HERO */
+
+  .hero {
+    min-height: 550px;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .hero .text {
+    width: 100%;
+  }
+
+  .hero .text p {
+    font-size: clamp(52px, 13vw, 80px);
+    letter-spacing: -3px;
+    line-height: 0.95;
+    word-break: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .hero .actions {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  /* SELECTED WORKS */
+
+  .selected-works {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .projects {
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .item {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .item img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    object-position: center;
+    background-color: #f5f5f2;
+  }
+
+  .item h3,
+  .item p {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  /* LEARNING */
+
+  .learning {
+    width: 100%;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    overflow: hidden;
+  }
+
+  /* JOURNEY */
+
+  .journey {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .journey-item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .journey-item>* {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .journey-item p {
+    font-size: 15px;
+    overflow-wrap: anywhere;
+  }
+
+  /* LEADERSHIP */
+
+  .leadership {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .lead-text {
+    width: 100%;
+    min-height: 500px;
+    height: auto;
+    padding: 60px 0;
+  }
+
+  .lead-text p {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(35px, 9vw, 60px);
+    letter-spacing: -2px;
+    overflow-wrap: anywhere;
+  }
+
+  .leadership-body {
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 45px;
+  }
+
+  .leadership-body>* {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .slogan {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(60px, 17vw, 95px);
+    letter-spacing: -4px;
+    overflow-wrap: anywhere;
+  }
+
+  .ttl-cards {
+    width: 100%;
+  }
+
+  .ttl-card {
+    width: 100%;
+    min-width: 0;
+  }
+
+  /* PHILOSOPHY */
+
+  .philosophy {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .philosophy p {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(28px, 8vw, 48px);
+    letter-spacing: -1.5px;
+    line-height: 1.05;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  /* SKILLS */
+
+  .skills {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .skills-grid {
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .skill-card {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    min-height: 260px;
+    padding: 24px;
+  }
+
+  .skill-card h2 {
+    font-size: 28px;
+  }
+
+  .skill-card ul {
+    max-width: 100%;
+  }
+
+  .skill-card li {
+    max-width: 100%;
+  }
+
+  /* FOOTER */
+
+  footer {
+    position: relative;
+    left: auto;
+    right: auto;
+    width: 100%;
+    max-width: 100%;
+    max-height: none;
+    padding: 55px 25px;
+    overflow: hidden;
+  }
+
+  footer h3 {
+    max-width: 100%;
+    font-size: clamp(50px, 13vw, 80px);
+    letter-spacing: -3px;
+    overflow-wrap: anywhere;
+  }
+
+  footer .btn {
+    margin-left: 0;
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
+}
+
+
+/* =========================================================
+   500px
+   ========================================================= */
+
+@media (max-width: 500px) {
+
+  body {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  /* NAV */
+
+  nav {
+    padding: 9px 8px;
+    border-radius: 0 0 15px 15px;
+  }
+
+  nav .logo h2 {
+    font-size: 24px;
+  }
+
+  nav .pages {
+    gap: 0;
+  }
+
+  nav .pages a {
+    font-size: 11px;
+    padding: 4px 5px;
+  }
+
+  /* If the nav is still too crowded */
+  nav .pages a:last-child {
+    display: none;
+  }
+
+  /* HERO */
+
+  .hero {
+    min-height: 500px;
+  }
+
+  .hero .text p {
+    font-size: clamp(45px, 14vw, 70px);
+    letter-spacing: -2px;
+  }
+
+  .hero .actions {
+    gap: 8px;
+  }
+
+  .hero .actions a,
+  .hero .actions button {
+    font-size: 13px;
+    padding: 11px 16px;
+  }
+
+  /* WORKS */
+
+  .item {
+    padding: 14px;
+    border-radius: 16px;
+  }
+
+  .item img {
+    height: 240px;
+    border-radius: 11px;
+  }
+
+  .item h3 {
+    font-size: 23px;
+  }
+
+  .item p {
+    font-size: 13px;
+  }
+
+  /* JOURNEY */
+
+  .journey-item {
+    padding: 25px 0;
+  }
+
+  .journey-item h3 {
+    font-size: 22px;
+  }
+
+  .journey-item p {
+    font-size: 14px;
+  }
+
+  /* LEADERSHIP */
+
+  .lead-text {
+    min-height: 430px;
+    padding: 50px 0;
+  }
+
+  .lead-text p {
+    font-size: clamp(32px, 10vw, 52px);
+  }
+
+  .slogan {
+    font-size: clamp(55px, 18vw, 80px);
+    letter-spacing: -3px;
+  }
+
+  .ttl-card {
+    padding: 20px;
+  }
+
+  /* PHILOSOPHY */
+
+  .philosophy p {
+    font-size: clamp(27px, 9vw, 42px);
+    letter-spacing: -1px;
+  }
+
+  /* SKILLS */
+
+  .skill-card {
+    min-height: 240px;
+    padding: 22px;
+  }
+
+  .skill-card h2 {
+    font-size: 25px;
+    margin-bottom: 35px;
+  }
+
+  .skill-card li {
+    font-size: 12px;
+    padding: 9px 12px;
+  }
+
+  /* FOOTER */
+
+  footer {
+    padding: 45px 20px;
+  }
+
+  footer h3 {
+    font-size: clamp(45px, 14vw, 70px);
+    letter-spacing: -2px;
+  }
+
+  footer .btn a {
+    font-size: 15px;
+    padding: 14px 19px;
+  }
+}
+
+
+/* =========================================================
+   380px
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  body {
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+
+  nav .logo h2 {
+    font-size: 21px;
+  }
+
+  nav .pages a {
+    font-size: 10px;
+    padding: 4px;
+  }
+
+  .hero .text p {
+    font-size: 43px;
+    letter-spacing: -2px;
+  }
+
+  .item img {
+    height: 210px;
+  }
+
+  .lead-text p {
+    font-size: 30px;
+  }
+
+  .slogan {
+    font-size: 52px;
+  }
+
+  .philosophy p {
+    font-size: 26px;
+  }
+
+  .skill-card {
+    padding: 18px;
+  }
+
+  footer {
+    padding: 40px 16px;
+  }
+
+  footer h3 {
+    font-size: 43px;
+  }
+}
