@@ -795,3 +795,33 @@ div {
     font-size: 43px;
   }
 }
+
+
+@media (max-width: 700px) {
+
+  .selected-works {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .item {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+  }
+
+  .item img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+}
