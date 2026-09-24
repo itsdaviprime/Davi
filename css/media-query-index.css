@@ -1527,3 +1527,187 @@ h6 {
     font-size: 43px;
   }
 }
+
+/* =========================================================
+   FOOTER — FINAL RESPONSIVE FIX
+   ========================================================= */
+
+footer {
+  position: relative;
+  left: auto;
+  right: auto;
+
+  width: 100%;
+  max-width: 100%;
+
+  min-width: 0;
+  max-height: none;
+
+  padding: 60px 40px;
+
+  border-radius: 20px 20px 0 0;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+footer .footer-container {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+footer h3 {
+  width: 100%;
+  max-width: 100%;
+
+  margin: 0;
+
+  color: #fff;
+
+  font-family: var(--header-font);
+
+  font-size: clamp(50px, 9vw, 100px);
+
+  line-height: 0.9;
+  letter-spacing: -4px;
+
+  overflow-wrap: break-word;
+  word-break: normal;
+
+  box-sizing: border-box;
+}
+
+footer .btn {
+  margin-left: 0;
+  margin-top: 50px;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 15px;
+
+  width: 100%;
+  max-width: 100%;
+}
+
+footer a {
+  box-sizing: border-box;
+  max-width: 100%;
+
+  padding: 16px 23px;
+
+  font-size: 18px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  footer {
+    padding: 55px 30px;
+    border-radius: 18px 18px 0 0;
+  }
+
+  footer h3 {
+    font-size: clamp(48px, 12vw, 80px);
+    letter-spacing: -3px;
+    line-height: 0.92;
+
+    margin: 0;
+  }
+
+  footer .btn {
+    margin-top: 45px;
+    gap: 12px;
+  }
+
+  footer a {
+    font-size: 17px;
+    padding: 15px 21px;
+  }
+}
+
+
+/* =========================================================
+   PHONE
+   ========================================================= */
+
+@media (max-width: 500px) {
+
+  footer {
+    width: 100%;
+    padding: 50px 24px;
+
+    border-radius: 18px 18px 0 0;
+
+    overflow: hidden;
+  }
+
+  footer h3 {
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0;
+
+    font-size: clamp(42px, 13vw, 68px);
+
+    line-height: 0.92;
+    letter-spacing: -2.5px;
+
+    overflow-wrap: break-word;
+  }
+
+  footer .btn {
+    width: 100%;
+
+    margin: 40px 0 0 0;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+  }
+
+  footer a {
+    font-size: 15px;
+    padding: 14px 19px;
+    border-radius: 16px;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONE
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  footer {
+    padding: 45px 20px;
+  }
+
+  footer h3 {
+    font-size: 43px;
+    letter-spacing: -2px;
+    line-height: 0.94;
+  }
+
+  footer .btn {
+    margin-top: 35px;
+  }
+
+  footer a {
+    font-size: 14px;
+    padding: 13px 17px;
+  }
+}
