@@ -799,29 +799,26 @@ div {
 
 @media (max-width: 700px) {
 
-  .selected-works {
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .projects {
+  .selected-works .projects {
     display: grid;
-    grid-template-columns: 1fr;
-    width: 100%;
+    grid-template-columns: 1fr !important;
     gap: 20px;
+
+    /* space from phone edges */
+    padding-left: 22px;
+    padding-right: 22px;
   }
 
-  .item {
+  .selected-works .projects .item {
     width: 100%;
     min-width: 0;
-    max-width: none;
+    max-width: 100%;
   }
 
-  .item img {
+  .selected-works .projects .item img {
     width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
+    height: 300px;
+    object-fit: contain;
+    object-position: center;
   }
 }
