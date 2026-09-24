@@ -1037,7 +1037,7 @@ h6 {
     width: 100%;
     max-width: 100%;
 
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) !important;
 
     gap: 12px;
 
@@ -1335,7 +1335,7 @@ h6 {
      ======================================================= */
 
   .skills {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) !important;
 
     gap: 12px;
 
