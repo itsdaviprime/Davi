@@ -797,23 +797,52 @@ div {
 }
 
 
+
+
+
+@media (max-width: 500px) {
+
+  .leadership .lead-text {
+    padding: 60px 0;
+  }
+
+  .leadership .lead-text p {
+    font-size: clamp(34px, 10vw, 50px);
+    line-height: 1.05;
+    letter-spacing: -1.5px;
+  }
+
+}
+
+
+
 @media (max-width: 700px) {
 
   .leadership .lead-text {
     height: auto !important;
-    min-height: 0;
-    padding: 80px 0;
+    min-height: 0 !important;
+
     display: block;
+
+    padding: 80px 0;
+
+    border-bottom: 1px solid var(--border);
+
     overflow: visible;
   }
 
   .leadership .lead-text p {
     width: 100%;
     max-width: 100%;
+
     margin: 0;
-    font-size: clamp(38px, 10vw, 58px);
+
+    font-size: clamp(38px, 10vw, 60px);
     line-height: 1.05;
     letter-spacing: -2px;
+
+    overflow: visible;
+    word-break: normal;
     overflow-wrap: break-word;
   }
 
