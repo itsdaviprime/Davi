@@ -12,13 +12,15 @@ body {
     margin: auto;
 }
 
-nav {
+nav .nav-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
   background-color: #f7f7f7dc;
   border-radius: 0px 0px 20px 20px;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
 }
 
 nav .logo h2 {
@@ -67,7 +69,7 @@ nav .pages a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  
+  margin-top: 50px;
   padding-left: var(--pad-default);
   padding-right: var(--pad-default);
   flex-direction: column;
@@ -759,4 +761,18 @@ footer a {
 
     padding: 10px 14px;
   }
+}
+
+
+.nav-container {
+ position: fixed; 
+ top: 0;
+ left: 0;
+ width: 100%;
+}
+
+
+#journey {
+  height: 80px;
+
 }
