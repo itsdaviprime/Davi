@@ -37,29 +37,28 @@ skillCards.forEach((card, index) => {
 
 const journeyItems = document.querySelectorAll(".journey-item");
 
-const journeyObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
+function animateJourney() {
+  const screenMiddle = window.innerHeight / 2;
 
-      const item = entry.target;
+  journeyItems.forEach((item) => {
+    const rect = item.getBoundingClientRect();
 
+    const itemMiddle = rect.top + rect.height / 2;
+
+    // How close the card is to the middle of the screen
+    const distance = Math.abs(itemMiddle - screenMiddle);
+
+    if (distance < 40 && !item.classList.contains("animate-hover")) {
       item.classList.add("animate-hover");
 
       setTimeout(() => {
         item.classList.remove("animate-hover");
-      }, 300);
+      }, 700);
     }
   });
-}, {
-  root: null,
-  rootMargin: "-45% 0px -45% 0px",
-  threshold: 0
-});
+}
 
-journeyItems.forEach((item) => {
-  journeyObserver.observe(item);
-});
-
+window.addEventListener("scroll", animateJourney);
 
 const DemartmentItems = document.querySelectorAll(".card-item");
 
