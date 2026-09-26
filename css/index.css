@@ -796,3 +796,8 @@ footer a {
 
 }
 
+#leadership-t {
+  display: inline-block;
+  
+  white-space: nowrap;
+}

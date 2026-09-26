@@ -99,5 +99,12 @@ var typed = new Typed("#build", {
   backDelay: 1500,
   loop: true
 })
+var typed = new Typed("#leadership-t", {
+  strings: ["Leadership", "Growth", "Change"],
+  typeSpeed: 200,
+  backSpeed: 100,
+  backDelay: 2000,
+  loop: true
+})
 
 AOS.init()
