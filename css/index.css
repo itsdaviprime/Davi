@@ -288,6 +288,13 @@ font-size: 16px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.07);
 }
 
+.journey .journey-cont .journey-item.animate-hover {
+  z-index: 1;
+  padding: 39px 5px;
+  background-color: var(--card);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.07);
+}
+
 .journey {
   margin-bottom: var(--section-space);
 }
@@ -385,6 +392,18 @@ font-size: 16px;
   transition: 0.2s ease;
 }
 
+.card-item:hover {
+  transform: translateX(5px);
+  border: 1px solid #bbb;
+  padding-left: 30px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.07);
+}
+.card-item.animation-active {
+  transform: translateX(5px);
+  border: 1px solid #bbb;
+  padding-left: 30px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.07);
+}
 .card-item:hover {
   transform: translateX(5px);
   border: 1px solid #bbb;
@@ -776,3 +795,4 @@ footer a {
   height: 80px;
 
 }
+

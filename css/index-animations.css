@@ -1,0 +1,22 @@
+.skills > div {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.skills > div.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.selected-works .projects .item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.selected-works .projects .item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
