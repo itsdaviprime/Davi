@@ -1754,3 +1754,29 @@ footer a {
     letter-spacing: -2px;
   }
 }
+
+
+
+@media (max-width: 600px) {
+
+  nav {
+    padding: 10px 20px;
+    flex-wrap: nowrap;
+  }
+
+  nav .logo h2 {
+    font-size: 32px;
+  }
+
+  nav .pages {
+    gap: 0;
+    padding: 0;
+    flex-shrink: 0;
+  }
+
+  .pages a {
+    font-size: 16px;
+    padding: 5px 7px;
+  }
+
+}
