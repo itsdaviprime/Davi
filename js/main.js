@@ -86,14 +86,14 @@ DemartmentItems.forEach((item) => {
 });
 
 var typed = new Typed("#name", {
-  strings: ["Davi", "Prince", "David"],
+  strings: ["Davi,", "Prince,", "David,"],
   typeSpeed: 200,
   backSpeed: 100,
   backDelay: 1500,
   loop: true
 })
 var typed = new Typed("#build", {
-  strings: ["code", "AI", "Robots"],
+  strings: ["code.", "AI.", "Robots."],
   typeSpeed: 200,
   backSpeed: 100,
   backDelay: 1500,
